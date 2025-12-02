@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "NoTeAzE",
+  "version": "2.0",
+  "description": "Take notes on any webpage and save them for later",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/note (2) (1).png"
+  },
+  "icons": {
+    "16": "images/note.png",
+    "48": "images/note (2) (1).png",
+    "128": "images/note (1).png"
+  },
+  "web_accessible_resources": [{
+    "resources" : ["all_notes.html"] ,
+    "matches" : ["<all_urls>"]
+  }]
+}

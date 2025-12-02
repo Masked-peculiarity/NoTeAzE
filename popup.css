@@ -1,0 +1,102 @@
+/* Reset some default styles */
+body {
+  margin: 0;
+  padding: 15px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  width: 320px;
+  box-sizing: border-box;
+}
+
+/* Headings */
+h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #f71c41;
+}
+
+/* Textarea for notes */
+textarea {
+  width: 100%;
+  min-height: 120px;
+  resize: vertical;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 6px;
+  touch-action: manipulation;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+}
+
+/* Status message */
+#status {
+  font-size: 13px;
+  color: #e0640b;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Divider */
+hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 10px 0;
+}
+
+/* Notes listing in all_notes.html */
+.note-entry {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.note-entry textarea {
+  background-color: #f9f9f9;
+  border: none;
+  resize: none;
+  height: 100px;
+  font-size: 14px;
+  color: #333;
+}
+
+.note-entry a {
+  text-decoration: none;
+  font-weight: bold;
+  word-break: break-all;
+}
+
+.note-entry a:hover {
+  color: red;
+}
+
+.note-entry.important {
+  background-color: coral;
+}

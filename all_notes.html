@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoTeAzE</title>
+  <link rel="stylesheet" href="popup.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="men1">
+      <button id="toggleSidebar" class="menu-btn">☰</button>
+      <button id="toggleDark" class="dark-btn">💡</button>
+      <button id="toggleDrawBox" class="draw-btn">✏️</button>
+    </div>
+    <div class="inpt">
+      <input type="text" id="searchInput" placeholder="🔎Search Notes..." />
+    </div>
+  </div>
+
+
+
+  <!-- MAIN CONTAINER -->
+  <div class="container">
+    <!-- SIDEBAR (toggleable) -->
+    <aside class="sidebar" id="sidebar">
+      <div id="noteLinks"></div>
+    </aside>
+
+    <div id="drawBoxContainer" style="display:none; padding: 10px; text-align:center;">
+      <canvas id="drawarea" width="500" height="300" style="border: 1px solid black; margin-top: 20px;"></canvas>
+      <br>
+      <input type="color" id="colorpicker" value="#000000" />
+      <input type="range" id="brushsize" min="1" max="30" value="2" />
+      <button id="eraser" class="eraser">⬜</button>
+      <button id="clear" class="clear">✖</button>
+      <button id="saveDrawing" class="save">Save as Note</button>
+    </div>
+    <div class="wrapper">
+      <!-- NOTE VIEW / DISPLAY AREA -->
+      <div class="wrap2">
+        <div class="note-display" id="noteView"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="all_notes.js"></script>
+</body>
+
+</html>

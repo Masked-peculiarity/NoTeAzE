@@ -1,0 +1,249 @@
+/* ========== RESET ========== */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* ========== VARIABLES ========== */
+:root {
+  --bg-color: #f1f1f1;
+  --text-color: #222;
+  --card-bg: #fff;
+  --sidebar-bg: #1f2937;
+  --sidebar-text: #eee;
+  --btn-bg: #ff6600;
+  --topbar-bg: #f71c41;
+  --search-bg: white;
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+  --card-bg: #1e1e1e;
+  --sidebar-bg: #190238;
+  --sidebar-text: #ccc;
+  --btn-bg: #ff9800;
+  --topbar-bg: #410890;
+  --search-bg: #333;
+}
+
+/* ========== BODY ========== */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* ========== TOPBAR ========== */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--topbar-bg);
+  border-bottom: 1px solid #ccc;
+  box-shadow: rgba(5, 12, 14, 0.5) 2px 8px 8px;
+  z-index: 100;
+}
+
+.menu-btn,
+.dark-btn,
+.draw-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  padding: 6px 12px;
+  box-shadow: rgba(5, 12, 14, 0.5) 2px 8px 8px;
+}
+
+.menu-btn {
+  font-size: 22px;
+  margin-left: 10px;
+  line-height: 1;
+}
+
+.menu-btn:hover {
+  background: linear-gradient(to right, #ff6600, #ff3300);
+  background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+}
+
+.dark-btn:hover {
+  background: linear-gradient(to right, #721eb7, #220391);
+  background-image: linear-gradient(-180deg, #721eb7, #220391);
+}
+
+.draw-btn:hover {
+  background: linear-gradient(to right, #ff6600, #ff3300);
+  background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+}
+
+/* Top search bar */
+#searchInput {
+  padding: 6px 12px;
+  font-size: 14px;
+  width: 250px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background-color: var(--search-bg);
+  color: var(--text-color);
+}
+
+/* ========== SIDEBAR ========== */
+.sidebar {
+  width: 280px;
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  padding-top: 10px;
+  overflow-y: auto;
+  flex-shrink: 0;
+  border-right: 1px solid #ccc;
+  height: 100%;
+  transition: transform 0.3s ease, width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  transform: translateX(-100%);
+  position: absolute;
+  left: 0;
+  height: calc(100vh - 60px);
+  z-index: 100;
+}
+
+.sidebar ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar li:hover {
+  background-color: #34495e;
+}
+
+/* ========== MAIN CONTAINER ========== */
+.container {
+  display: flex;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+  position: relative;
+}
+
+.wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.wrap2 {
+  height: calc(100vh - 60px);
+  width: 600px;
+  padding: 20px;
+}
+
+/* ========== NOTE VIEW ========== */
+.note-view {
+  flex-grow: 1;
+  padding: 20px;
+  background: #f8fafd;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Note box */
+.note-entry {
+  max-width: 600px;
+  margin: 20px auto;
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.note-entry textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  font-size: 14px;
+  resize: vertical;
+  border-radius: 5px;
+  border: 1px solid #444;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  font-family: inherit;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+/* Buttons */
+.note-entry button {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: linear-gradient(to right, #ff6600, #ff3300);
+  transition: background-color 0.2s ease;
+}
+
+.note-entry button:hover {
+  box-shadow: rgba(253, 76, 0, 0.5) 2px 8px 8px;
+  background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+}
+
+/* Highlight important notes */
+.important {
+  border-left: 5px solid #f39c12;
+}
+
+/* Utility */
+.inpt {
+  text-align: right;
+  padding: 8px 10px;
+  margin-right: 5px;
+}
+
+.men1 {
+  display: flex;
+  gap: 20px;
+}
+
+/* Draw area buttons */
+.eraser,
+.clear {
+  border: none;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.save {
+  background: linear-gradient(to right, #ff6600, #ff3300);
+  background-image: linear-gradient(#FF7E31, #E62C03);
+}

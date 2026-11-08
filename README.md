@@ -1,5 +1,4 @@
-NoTeAzE 2.0
-
+📝 NoTeAzE 2.0
 Your thoughts, right where you need them.
 
 NoTeAzE is a lightweight Chrome extension that allows you to take notes while browsing the web. Save thoughts, ideas, important information, and drawings directly from your browser, with notes organized and associated with their respective webpages.
@@ -48,15 +47,15 @@ NoTeAzE/
 
 Follow these steps to install NoTeAzE locally.
 
-1. Clone the repository
+1. Clone the Repository
 bash
 git clone https://github.com/Masked-peculiarity/NoTeAzE.git
 
-2. Navigate to the project directory
+2. Navigate to the Project Directory
 bash
 cd NoTeAzE
 
-3. Load the extension in Chrome
+3. Load the Extension in Chrome
 Open Google Chrome.
 Navigate to chrome://extensions/.
 Enable Developer mode using the toggle in the top-right corner.
@@ -64,7 +63,7 @@ Click Load unpacked.
 Select the cloned NoTeAzE project folder.
 Pin NoTeAzE to your Chrome toolbar for easy access.
 
-That's it! NoTeAzE is ready to use.
+That's it! NoTeAzE is ready to use. 🎉
 
 📖 How to Use
 1. Take Notes on Any Webpage
@@ -147,7 +146,6 @@ Add rich-text formatting.
 Add customizable keyboard shortcuts.
 Improve drawing tools and canvas functionality.
 Add note synchronization across devices.
-
 📄 License
 
 NoTeAzE is licensed under the MIT License.
@@ -158,6 +156,8 @@ You are free to use, copy, modify, distribute, and sublicense this project, subj
 
 If you find NoTeAzE useful, consider giving the repository a ⭐ on GitHub!
 
-Repository: https://github.com/Masked-peculiarity/NoTeAzE
+Repository: Masked-peculiarity/NoTeAzE
 
-NoTeAzE — Capture your thoughts. Save your ideas. Never lose a thought while browsing.
+<p align="center">
+<strong>NoTeAzE — Capture your thoughts. Save your ideas. Never lose a thought while browsing.</strong>
+</p>
